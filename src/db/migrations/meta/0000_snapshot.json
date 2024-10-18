@@ -1,14 +1,14 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "5ede0e2e-78cc-4f1a-a48e-b6095496d2a8",
+  "id": "75aa18d5-a7ff-4395-9eb4-b982207ecfbd",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "ships": {
-      "name": "ships",
+    "ship": {
+      "name": "ship",
       "columns": {
-        "ship_id": {
-          "name": "ship_id",
+        "id": {
+          "name": "id",
           "type": "integer",
           "primaryKey": true,
           "notNull": true,
@@ -63,11 +63,11 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "users": {
-      "name": "users",
+    "user": {
+      "name": "user",
       "columns": {
-        "user_id": {
-          "name": "user_id",
+        "id": {
+          "name": "id",
           "type": "integer",
           "primaryKey": true,
           "notNull": true,

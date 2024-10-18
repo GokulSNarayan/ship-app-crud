@@ -1,0 +1,29 @@
+[
+    {
+        "shipId": 1,
+        "name": "Titanic",
+        "length": 269,
+        "width": 28,
+        "code": "TITA-1234-T1",
+        "lastUpdated": "2023-10-01T12:00:00Z",
+        "updatedBy": 101
+    },
+    {
+        "shipId": 2,
+        "name": "Queen Mary",
+        "length": 310,
+        "width": 36,
+        "code": "QUMA-5678-Q2",
+        "lastUpdated": "2023-10-02T12:00:00Z",
+        "updatedBy": 102
+    },
+    {
+        "shipId": 3,
+        "name": "USS Enterprise",
+        "length": 342,
+        "width": 40,
+        "code": "USSE-9012-U3",
+        "lastUpdated": "2023-10-03T12:00:00Z",
+        "updatedBy": 103
+    }
+]
