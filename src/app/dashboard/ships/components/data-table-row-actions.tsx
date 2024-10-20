@@ -4,6 +4,8 @@ import { DotsHorizontalIcon } from "@radix-ui/react-icons"
 import { Row } from "@tanstack/react-table"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuShortcut, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
+
 
 interface DataTableRowActionsProps<TData> {
     row: Row<TData>
@@ -12,7 +14,10 @@ interface DataTableRowActionsProps<TData> {
 export function DataTableRowActions<TData>({
     row,
 }: DataTableRowActionsProps<TData>) {
+const shipId = row.getValue('shipId')
 
+
+    const router = useRouter()
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -25,7 +30,7 @@ export function DataTableRowActions<TData>({
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-[160px]">
-                <DropdownMenuItem>Edit</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push(`/dashboard/ships/${shipId}`)}>Edit</DropdownMenuItem>
                 <DropdownMenuItem>
                     Delete
                     <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
