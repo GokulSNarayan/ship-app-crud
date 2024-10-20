@@ -1,6 +1,6 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { Login } from "@/components/login/login";
-import containerShip from "../public/unsplash-container-ship.jpg";
+// import containerShip from "../public/unsplash-container-ship.jpg";
 
 
 
