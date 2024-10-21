@@ -31,6 +31,5 @@ export default function ShipEditDialog({ params }: { params: { id: string } }) {
                 </DialogHeader>
             </DialogContent>
         </Dialog>
-
     )
 }

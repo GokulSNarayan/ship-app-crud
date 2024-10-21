@@ -6,21 +6,19 @@ import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Ship } from "@/db/schema";
-import { editShipData } from "../actions";
+import { createShip, editShipData } from "../actions";
 import { useRouter } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { Typography } from "@/components/ui/typography";
-import { EditFormSchema, shipformSchema } from "./types";
+import { CreateFormSchema, shipformSchema } from "./types";
 
 
 
-
-export function EditForm({ data }: { data: Ship }) {
+export function CreateForm() {
     const { toast } = useToast()
     const router = useRouter()
-    const queryClient = useQueryClient()
-    const form = useForm<EditFormSchema>({
+    const form = useForm<CreateFormSchema>({
         resolver: zodResolver(shipformSchema),
         mode: 'onSubmit',
         defaultValues: {
@@ -28,26 +26,19 @@ export function EditForm({ data }: { data: Ship }) {
             length: 0,
             width: 0,
             code: ''
-        },
-        values: {
-            name: data.name,
-            length: data.length,
-            width: data.width,
-            code: data.code
         }
     })
-    async function onSubmit(values: EditFormSchema) {
-        const { success, message } = await editShipData(values, data.shipId)
+    async function onSubmit(values: CreateFormSchema) {
+        const { success, message } = await createShip(values)
         if (success) {
-            await queryClient.invalidateQueries({ queryKey: ['ship', data.shipId] })
             toast({
                 title: message,
-                description: "The record was updated successfully!",
+                description: "The record was created successfully!",
             })
         } else {
             toast({
                 title: message,
-                description: "There was some error while updating the record!",
+                description: "There was some error while creating the record!",
                 variant: "destructive"
             })
         }
