@@ -4,6 +4,7 @@ import { type Ship } from "@/db/schema"
 import { ColumnDef } from "@tanstack/react-table"
 import { DataTableRowActions } from "./data-table-row-actions"
 import { DataTableColumnHeader } from "./data-table-column-header"
+import dayjs from 'dayjs'
 
 export const columns: ColumnDef<Ship>[] = [
     {
@@ -41,12 +42,7 @@ export const columns: ColumnDef<Ship>[] = [
         header: ({column}) =>(
             <DataTableColumnHeader column={column} title="Last Updated"/>
         ),
-    },
-    {
-        accessorKey:"updatedBy",
-        header: ({column}) =>(
-            <DataTableColumnHeader column={column} title="Updated By"/>
-        ),
+        cell: ({row}) => dayjs(row?.original?.lastUpdated!).format('YYYY-MM-DD HH:mm:ss')
     },
     {
         id: "actions",

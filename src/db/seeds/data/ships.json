@@ -1,29 +1,62 @@
 [
     {
-        "shipId": 1,
         "name": "Titanic",
         "length": 269,
         "width": 28,
-        "code": "TITA-1234-T1",
-        "lastUpdated": "2023-10-01T12:00:00Z",
-        "updatedBy": 101
+        "code": "TITA-1234-T1"
     },
     {
-        "shipId": 2,
         "name": "Queen Mary",
         "length": 310,
         "width": 36,
-        "code": "QUMA-5678-Q2",
-        "lastUpdated": "2023-10-02T12:00:00Z",
-        "updatedBy": 102
+        "code": "QUMA-5678-Q2"
     },
     {
-        "shipId": 3,
         "name": "USS Enterprise",
         "length": 342,
         "width": 40,
-        "code": "USSE-9012-U3",
-        "lastUpdated": "2023-10-03T12:00:00Z",
-        "updatedBy": 103
+        "code": "USSE-9012-U3"
+    },
+    {
+        "name": "HMS Victory",
+        "length": 69,
+        "width": 15,
+        "code": "HMSV-3456-H4"
+    },
+    {
+        "name": "Bismarck",
+        "length": 251,
+        "width": 36,
+        "code": "BISM-7890-B5"
+    },
+    {
+        "name": "Yamato",
+        "length": 263,
+        "width": 38,
+        "code": "YAMA-1122-Y6"
+    },
+    {
+        "name": "USS Missouri",
+        "length": 270,
+        "width": 33,
+        "code": "USSM-3344-U7"
+    },
+    {
+        "name": "USS Arizona",
+        "length": 185,
+        "width": 29,
+        "code": "USSA-5566-U8"
+    },
+    {
+        "name": "HMS Dreadnought",
+        "length": 160,
+        "width": 25,
+        "code": "HMSD-7788-H9"
+    },
+    {
+        "name": "USS Nimitz",
+        "length": 333,
+        "width": 41,
+        "code": "USSN-9900-U10"
     }
 ]

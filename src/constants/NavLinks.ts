@@ -9,12 +9,7 @@ export const items = [
       title: "Ships",
       url: "/dashboard/ships",
       icon: Ship,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: Search,
-    },
+    }
   ]
 
   export type items = typeof items;
