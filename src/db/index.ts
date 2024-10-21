@@ -1,12 +1,14 @@
-import 'dotenv/config';
-import { drizzle } from 'drizzle-orm/libsql';
-import { createClient } from '@libsql/client';
-import { migrate } from 'drizzle-orm/libsql/migrator';
-import config from '../../drizzle.config';
+import { env } from '@/env/server';
+import { drizzle } from 'drizzle-orm/postgres-js';
+import postgres from "postgres";
+import * as schema from '@/db/schema';
 
-const client = createClient({ url: process.env.DB_FILE_NAME! });
-export const db = drizzle({ client });
+export const client = postgres(env.DATABASE_URL, {
+    max: env.DB_MIGRATING ? 1 : undefined,
+  });
+export const db = drizzle(client, {
+    schema,
+  });
 
 export type db = typeof db;
 
-migrate(db, { migrationsFolder: config.out! });
