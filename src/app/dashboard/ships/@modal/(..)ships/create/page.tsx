@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { CreateForm } from "../../../components/create-form";
+import { CreateForm } from "../../../_components/create-form";
 
 export default function ShipCreateDialog() {
     const [isOpen, setIsOpen] = useState(true);  

@@ -5,7 +5,7 @@ import { DialogTitle } from "@radix-ui/react-dialog";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { EditForm } from "../../../components/edit-form";
+import { EditForm } from "../../../_components/edit-form";
 
 export default function ShipEditDialog({ params }: { params: { id: string } }) {
     const [isOpen, setIsOpen] = useState(true);  

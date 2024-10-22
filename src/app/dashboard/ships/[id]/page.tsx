@@ -1,5 +1,5 @@
 import { ship } from "@/db/schema";
-import { EditForm } from "../components/edit-form";
+import { EditForm } from "../_components/edit-form";
 import { db } from "@/db";
 import { eq } from "drizzle-orm";
 

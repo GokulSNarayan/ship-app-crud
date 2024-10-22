@@ -1,8 +1,8 @@
 import { Typography } from "@/components/ui/typography";
 import { db } from "@/db";
 import { ship } from "@/db/schema";
-import { DataTable } from "./components/data-table";
-import { columns } from "./components/columns";
+import { DataTable } from "./_components/data-table";
+import { columns } from "./_components/columns";
 export const dynamic = 'force-dynamic';
 
 export default async function Ships() {

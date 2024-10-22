@@ -4,7 +4,7 @@ import { ship } from "@/db/schema";
 import { db } from "@/db";
 import { eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
-import { CreateFormSchema, EditFormSchema } from "./components/types";
+import { CreateFormSchema, EditFormSchema } from "./_components/types";
 
 
 export async function createShip(data: CreateFormSchema) {
