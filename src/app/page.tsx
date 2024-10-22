@@ -3,9 +3,6 @@ import { Login } from "@/components/login/login";
 // import containerShip from "../public/unsplash-container-ship.jpg";
 
 
-
-
-
 export default async function Home() {
 
   return (

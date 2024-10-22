@@ -25,6 +25,7 @@ export function Login() {
             />
             <Button
                 type="submit"
+                name="login"
                 className="bg-black text-white p-2 rounded hover:bg-blue-700"
             >
                 Login
